@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.breadcrumb{
+    background-color: #fab700;
+    border-radius: 0%;
+    color: #000;
+}
+.breadcrumb-item {
+    color: black !important;
+}
+.breadcrumb>li+li:before{
+    color: black !important;
+
+}

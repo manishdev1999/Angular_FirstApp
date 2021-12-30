@@ -1,0 +1,43 @@
+<div class="row">
+<div class="row">
+    <div class="col-md-12">
+        <form action="" class="form-group">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="Name">Item</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-1">
+                    <label for="Name">Quantity</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-success">
+                        Add
+                    </button>
+                    <button class="btn btn-primary">
+                        Clear
+                    </button>
+                    <button class="btn btn-danger">
+                        Delete
+                    </button>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="col-md-6" *ngFor="let inc of incredients">
+    <div class="card w-75">
+        <div class="card-body">
+          <h5 class="card-title">{{inc.name}}</h5>
+          <p class="card-text">{{inc.amount}}</p>
+          <a href="#" class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    
+</div>
+</div>

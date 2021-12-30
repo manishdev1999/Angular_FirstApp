@@ -1,0 +1,36 @@
+.cardimg{
+    width: 100%;
+    height: auto;
+}
+.btn{
+    border-radius: 0% !important;
+}
+.card{
+    padding: 10px;
+    border-color: #fab700;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+
+}
+.addrep{
+    float: right;
+}
+.card:hover{
+    padding: 10px;
+    border-color: #000000;
+    border-style: solid;
+    background-color: #fab700;
+    color: #000;
+    
+}
+.btn-dark{
+    position: relative;
+    margin: auto;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+}
+.fa{
+    color: #fff;
+}
