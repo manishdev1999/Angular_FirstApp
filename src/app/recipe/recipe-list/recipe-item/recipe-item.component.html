@@ -1,1 +1,14 @@
-<p>recipe-item works!</p>
+
+
+    <div class="col-md-4" (click)="onSelected()">
+        <div class="card" >
+            <img class="card-img-top cardimg" src="{{recipe.recipe_img}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{recipe.recipe_name}}</h5>
+              <p class="card-text">{{recipe.recipe_description}}</p>
+              <a href="#" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i>
+                Explore</a>
+            </div>
+          </div>
+    </div>
+

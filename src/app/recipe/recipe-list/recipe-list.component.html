@@ -6,27 +6,9 @@
         </div>
     </div>
     <div class="col-md-8">
-        <div *ngFor="let r of recipes ">
-            
-            <div class="col-md-4">
-                <div class="card" >
-                    <img class="card-img-top cardimg" src="{{r.recipe_img}}" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">{{r.recipe_name}}</h5>
-                      <p class="card-text">{{r.recipe_description}}</p>
-                      <a href="#" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i>
-                        Explore</a>
-                    </div>
-                  </div>
-            </div>
-
-        </div>
-     
-       
-
+            <app-recipe-item *ngFor="let r of recipes " [recipe] = "r" (selectedItem)="recipeSelect(r)"></app-recipe-item>
+                 
     </div>
-    <div class="col-md-4">
-        <app-recipe-details></app-recipe-details>
-    </div>
+
 </div>
 </div>
