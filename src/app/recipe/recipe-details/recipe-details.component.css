@@ -14,14 +14,7 @@
 .addrep{
     float: right;
 }
-.card:hover{
-    padding: 10px;
-    border-color: #000000;
-    border-style: solid;
-    background-color: #fab700;
-    color: #000;
-    
-}
+
 .btn-dark{
     position: relative;
     margin: auto;
