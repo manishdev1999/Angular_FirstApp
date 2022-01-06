@@ -4,20 +4,20 @@
 <div class="row">
 <div class="row">
     <div class="col-md-12">
-        <form action="" class="form-group">
+        <form (ngSubmit) = "AddItem(f)" #f="ngForm">
             <div class="row">
                 <div class="col-md-2">
                     <label for="Name">Item</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="name" ngModel>
                 </div>
                 <div class="col-md-1">
                     <label for="Name">Quantity</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="quantity" ngModel>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-success">
+                    <button class="btn btn-success" type="submit">
                         Add
                     </button>
                     <button class="btn btn-primary">

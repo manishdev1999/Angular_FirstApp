@@ -10,6 +10,9 @@ import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.c
 import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-item.component';
 import { CheckingComponent } from './checking/checking.component';
 import { ParroComponent } from './parro/parro.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { ParrocComponent } from './parroc/parroc.component'
 
 @NgModule({
   declarations: [
@@ -21,16 +24,21 @@ import { ParroComponent } from './parro/parro.component';
     RecipeDetailsComponent,
     RecipeItemComponent,
     CheckingComponent,
-    ParroComponent
+    ParroComponent,
+    ParrocComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       [
         {path:'', component: CheckingComponent},
         {path:'shopping', component: ShoppingListComponent},
         {path:'recipe', component: RecipeComponent},
         {path:'parro/:id', component: ParroComponent},
+        {path:'parroc', component:ParrocComponent}
 
       
       ]

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form (ngSubmit)="submitData(f)" #f="ngForm">
+                <label for="item">Item Name</label>
+                <input type="text" class="form-control" name="item" ngModel>
+                <label for="item">Quantity</label>
+                <input type="text" name="quantity" id="quantity" class="form-control" ngModel>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p *ngIf="_fetcheddata.length< 1">
+                No data Available
+            </p>
+            <div *ngIf="_fetcheddata.length> 1">
+                <div class="col-md-6" *ngFor="let inc of _fetcheddata">
+                    <div class="card w-75">
+                        <div class="card-body">
+                          <h5 class="card-title">{{inc.item}}</h5>
+                          <p class="card-text">{{inc.quantity}}</p>
+                        </div>
+                      </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
