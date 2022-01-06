@@ -12,7 +12,9 @@ import { CheckingComponent } from './checking/checking.component';
 import { ParroComponent } from './parro/parro.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {HttpClientModule, HttpClient} from '@angular/common/http';
-import { ParrocComponent } from './parroc/parroc.component'
+import { ParrocComponent } from './parroc/parroc.component';
+import { AuthComponent } from './auth/auth.component';
+import { PreloaderComponent } from './shared/preloader/preloader.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ParrocComponent } from './parroc/parroc.component'
     RecipeItemComponent,
     CheckingComponent,
     ParroComponent,
-    ParrocComponent
+    ParrocComponent,
+    AuthComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,8 @@ import { ParrocComponent } from './parroc/parroc.component'
         {path:'shopping', component: ShoppingListComponent},
         {path:'recipe', component: RecipeComponent},
         {path:'parro/:id', component: ParroComponent},
-        {path:'parroc', component:ParrocComponent}
+        {path:'parroc', component:ParrocComponent},
+        {path:'auth', component:AuthComponent}
 
       
       ]

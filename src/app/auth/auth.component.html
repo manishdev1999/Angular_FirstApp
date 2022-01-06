@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Login</h3>
+            <div *ngIf = "_isloading"> 
+                <app-preloader></app-preloader>
+            </div>
+            <form action="" #authform = "ngForm" (ngSubmit)="onSubmit(authform)" *ngIf = "!(_isloading)">
+                <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="emailid"  class="form-control" ngModel required>
+                </div>
+                <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password"  class="form-control" minlength="10" required ngModel>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success" [disabled]="!authform.valid">
+                        {{_isloggeduser ? 'Login' : 'Register'}}
+                        </button>
+                        <button type="button" (click)= "changeAuth()" class="btn btn-success" style="margin-left:20px;">Switch to {{_isloggeduser ? 'Register' : 'Login'}}</button>
+        
+                </div>
+              
+            </form>
+        </div>
+    </div>
+</div>
